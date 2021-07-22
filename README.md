@@ -33,9 +33,6 @@
   <dt>DayJS</dt>
   <dd>Because moment.js is dead :<</dd>
 
-  <dt>DayJS</dt>
-  <dd>Because moment.js is dead :<</dd>
-
   <dt>Prettier + Husky</dt>
   <dd>Get your code cleaned on each commit</dd>
 </dl>
