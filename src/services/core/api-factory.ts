@@ -1,17 +1,17 @@
 import HttpService from "./http-service";
 import AuthService from "../api/auth-service";
-import ExampleCrudService from "../api/example-crud-service";
+import TodosService from "../api/todos-service";
 
 const ApiList = [
+  {
+    variableName: "todosService",
+    classEntity: TodosService,
+    route: TodosService.route,
+  },
   {
     variableName: "authService",
     classEntity: AuthService,
     route: AuthService.route,
-  },
-  {
-    variableName: "cubeService",
-    classEntity: ExampleCrudService,
-    route: ExampleCrudService.route,
   },
 ];
 
@@ -21,7 +21,7 @@ export interface ApiFactoryParams {
 
 // declaration merging with class
 interface ApiFactory {
-  exampleCrudService: ExampleCrudService;
+  todosService: TodosService;
   authService: AuthService;
 }
 

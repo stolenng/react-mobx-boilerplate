@@ -26,7 +26,7 @@ export default class CrudService extends BaseService {
     return response.data;
   }
 
-  async update<D, R>(id: string, data: D) {
+  async update<D, R>(id: string | number, data: D) {
     const response = await this.httpService.put<D, BaseResponse<R>>(
       `${this.path}/${id}`,
       data
@@ -35,7 +35,7 @@ export default class CrudService extends BaseService {
     return response.data;
   }
 
-  async delete<R>(id: string) {
+  async delete<R>(id: string | number) {
     const response = await this.httpService.delete<BaseResponse<R>>(
       `${this.path}/${id}`
     );

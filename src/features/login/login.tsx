@@ -14,14 +14,14 @@ const Login = () => {
     uiStore: { authStore },
   } = useStore();
   const { t } = useTranslation();
-  const { control, reset, handleSubmit, watch } = useForm<FormProps>();
+  const { control, reset, handleSubmit } = useForm<FormProps>();
 
   useEffect(() => {
     reset({
       username: "",
       password: "",
     });
-  }, []);
+  }, [reset]);
 
   const login = async (data: FormProps) => {
     await authStore.login(data.username, data.password);

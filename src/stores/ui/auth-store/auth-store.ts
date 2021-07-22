@@ -1,7 +1,7 @@
 import { action, computed, makeObservable, observable } from "mobx";
 import { getEnv, getRoot } from "../../../helpers/mobx-easy-wrapper";
 import User from "../../data/models/user";
-import { StorageItems } from "../../../services/core/credentials-storage-service";
+import { StorageItems } from "../../../services/core/storage-service";
 
 export enum AuthState {
   Authenticating = "authenticating",

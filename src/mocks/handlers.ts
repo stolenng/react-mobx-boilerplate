@@ -1,4 +1,5 @@
 import { rest } from "msw";
+import todosRoutes from "./todos";
 
 export const handlers = [
   rest.post("/auth/login", (req, res, ctx) => {
@@ -12,4 +13,5 @@ export const handlers = [
       })
     );
   }),
+  ...todosRoutes,
 ];

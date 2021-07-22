@@ -1,12 +1,10 @@
 import BaseService from "../core/base-service";
-import CredentialsStorage, {
-  StorageItems,
-} from "../core/credentials-storage-service";
+import StorageService, { StorageItems } from "../core/storage-service";
 
 export default class AuthService extends BaseService {
   // TODO: change this to your route in server
   static route = "auth";
-  private storage: CredentialsStorage = new CredentialsStorage();
+  private storage: StorageService = new StorageService();
 
   storeCredentials(token: string) {
     this.storage.setItem(StorageItems.TOKEN, token);

@@ -2,7 +2,7 @@ export enum StorageItems {
   TOKEN = "token",
 }
 
-export default class CredentialsStorage {
+export default class StorageService {
   setItem(itemName: StorageItems, value: string) {
     localStorage.setItem(itemName, value);
   }
