@@ -1,0 +1,18 @@
+.hoverable {
+  &:hover {
+    color: $hover-color;
+    cursor: pointer;
+  }
+
+  &.warning {
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
