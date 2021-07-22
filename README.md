@@ -31,10 +31,19 @@
   <dd>The best and most simple library to working with forms</dd>
 
   <dt>DayJS</dt>
-  <dd>Because moment.js is dead :<</dd>
+  <dd>Because moment.js is dead :</dd>
+
+  <dt>Mock Service Worker</dt>
+  <dd>Simple library to mock server during development</dd>
 
   <dt>Prettier + Husky</dt>
   <dd>Get your code cleaned on each commit</dd>
+
+  <dt>Todo List Example</dt>
+  <dd>Full example of todo list with api calls, mobx and React</dd>
+
+  <dt>Everything is modifiable</dt>
+  <dd>If you don't like any part of the boilerplate, you can just replace in seconds !</dd>
 </dl>
 
 # Structure
