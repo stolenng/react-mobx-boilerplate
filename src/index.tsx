@@ -17,13 +17,6 @@ try {
 
 const { rootStore, env } = createStore({ envConfig });
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-
 const initApp = async () => {
   await env.translationService.init();
 

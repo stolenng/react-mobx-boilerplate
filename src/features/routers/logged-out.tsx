@@ -11,12 +11,8 @@ import { Row } from "antd";
 const LoggedOut = () => {
   return (
     <Row justify="center" align="middle" className="logged-out-container">
-      <h2>{/*Aggua Future Logo*/}</h2>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
           <Route path="/login">
             <Login />
           </Route>

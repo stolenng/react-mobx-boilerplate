@@ -20,7 +20,7 @@ function App() {
   return (
     <ConfigProvider direction={uiStore.direction}>
       <div className="App">
-        {AuthState.Authenticating && <Spin />}
+        {authStore.authState === AuthState.Authenticating && <Spin />}
         {/* Load spinner while we are waiting for authentication - for both logged in + logged out */}
         {authStore.authState === AuthState.LoggedIn ? (
           <LoggedIn />
