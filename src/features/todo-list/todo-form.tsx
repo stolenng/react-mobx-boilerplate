@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { useStore } from "../../helpers/use-store";
+import { Button, Input, Row } from "antd";
+import { useTranslation } from "react-i18next";
 
 export const TodoForm = () => {
+  const { t } = useTranslation();
   const [newTodo, setTodo] = useState("");
   const {
     dataStore: { todosStore },
@@ -13,13 +16,16 @@ export const TodoForm = () => {
   };
 
   return (
-    <div className="todo-new">
-      <input
+    <Row className="todo-new">
+      <Input
+        className="todo-input"
         type="text"
         value={newTodo}
         onChange={(e) => setTodo(e.target.value)}
       />
-      <button onClick={addTodo}>Add Todo</button>
-    </div>
+      <Button type="primary" onClick={addTodo}>
+        {t("add")}
+      </Button>
+    </Row>
   );
 };

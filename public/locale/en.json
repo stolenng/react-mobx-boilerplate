@@ -5,5 +5,14 @@
   "english": "English",
   "language": "Language",
   "username": "User Name",
-  "password": "Password"
+  "password": "Password",
+  "home": "Home",
+  "login": "Login",
+  "todo_list": "Todo List",
+  "add": "Add",
+  "finished_todos": "Finished Todos",
+  "open_todos": "Open Todos",
+  "edit": "Edit",
+  "delete": "Delete",
+  "save": "Save"
 }

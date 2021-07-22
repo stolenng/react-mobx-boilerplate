@@ -20,6 +20,11 @@ const todosRoutes: any[] = [
             text: `Don't be shy and give us a star! :)`,
             isDone: false,
           },
+          {
+            id: getNextId(),
+            text: `Clone Project`,
+            isDone: true,
+          },
         ],
       })
     );

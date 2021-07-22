@@ -6,5 +6,13 @@
   "language": "שפה",
   "hello": "שלום",
   "username": "שם משתמש",
-  "password": "סיסמה"
+  "password": "סיסמה",
+  "home": "עמוד הבית",
+  "todo_list": "רשימת משימות",
+  "add": "הוסף",
+  "finished_todos": "משימות שהסתיימו",
+  "open_todos": "משימות פתוחות",
+  "edit": "ערוך",
+  "delete": "מחק",
+  "save": "שמור"
 }

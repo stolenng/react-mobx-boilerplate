@@ -28,34 +28,34 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <Typography.Title underline level={2}>
-        {t("login")}
-      </Typography.Title>
-      <Card>
-        <Space direction="vertical">
-          <Typography.Text>{t("username")}</Typography.Text>
-          <Controller
-            name={`username`}
-            control={control}
-            render={({ field }) => (
-              <Input onChange={field.onChange} value={field.value} />
-            )}
-          />
-          <Typography.Text>{t("password")}</Typography.Text>
-          <Controller
-            name={`password`}
-            control={control}
-            render={({ field }) => (
-              <Input onChange={field.onChange} value={field.value} />
-            )}
-          />
-          <Button type="primary" onClick={handleSubmit(login)}>
-            {t("login")}
-          </Button>
-        </Space>
-      </Card>
-    </div>
+    <Card className="login-card">
+      <Space direction="vertical">
+        <Typography.Title level={2}>{t("login")}</Typography.Title>
+        <Typography.Text>{t("username")}</Typography.Text>
+        <Controller
+          name={`username`}
+          control={control}
+          render={({ field }) => (
+            <Input onChange={field.onChange} value={field.value} />
+          )}
+        />
+        <Typography.Text>{t("password")}</Typography.Text>
+        <Controller
+          name={`password`}
+          control={control}
+          render={({ field }) => (
+            <Input onChange={field.onChange} value={field.value} />
+          )}
+        />
+        <Button
+          className="login-button"
+          type="primary"
+          onClick={handleSubmit(login)}
+        >
+          {t("login")}
+        </Button>
+      </Space>
+    </Card>
   );
 };
 

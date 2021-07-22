@@ -45,6 +45,11 @@ class AuthStore {
     return this.currentUser;
   }
 
+  @computed
+  get isLoggedIn() {
+    return this.authState === AuthState.LoggedIn;
+  }
+
   @action
   setAuthState(authState: AuthState) {
     this.authState = authState;

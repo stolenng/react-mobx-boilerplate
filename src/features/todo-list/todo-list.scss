@@ -1,0 +1,27 @@
+.todo-list {
+  text-align: center;
+
+  .todo-input {
+    width: 90%;
+  }
+
+  .todo-item {
+    text-align: center;
+  }
+
+  .open-todos,
+  .finished-todos {
+    margin-top: 15px;
+  }
+
+  .todo-save-input {
+    width: 70%;
+  }
+
+  .todo-actions {
+    cursor: pointer;
+    span {
+      margin: 0 5px;
+    }
+  }
+}

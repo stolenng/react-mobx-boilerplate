@@ -3,8 +3,11 @@ import TodoComponent from "./todo";
 import { observer } from "mobx-react";
 import { useStore } from "../../helpers/use-store";
 import { TodoForm } from "./todo-form";
+import { Col, Row, Typography } from "antd";
+import { useTranslation } from "react-i18next";
 
 const TodoList = () => {
+  const { t } = useTranslation();
   const {
     dataStore: { todosStore },
   } = useStore();
@@ -15,21 +18,26 @@ const TodoList = () => {
   }, []);
 
   return (
-    <div className="todo-list">
-      <TodoForm />
-      <div className="open-todos">
-        <span>Open Todos</span>
+    <Row className="todo-list">
+      <Col span={24}>
+        <Typography.Title>{t("todo_list")}</Typography.Title>
+      </Col>
+      <Col span={24}>
+        <TodoForm />
+      </Col>
+      <Col span={12} className="open-todos">
+        <Typography.Title level={3}>{t("open_todos")}</Typography.Title>
         {todosStore.openTodos.map((todo) => (
           <TodoComponent key={`${todo.id}-${todo.text}`} todo={todo} />
         ))}
-      </div>
-      <div className="finished-todos">
-        <span>Finished Todos</span>
+      </Col>
+      <Col span={12} className="finished-todos">
+        <Typography.Title level={3}>{t("finished_todos")}</Typography.Title>
         {todosStore.finishedTodos.map((todo) => (
           <TodoComponent key={`${todo.id}-${todo.text}`} todo={todo} />
         ))}
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 
