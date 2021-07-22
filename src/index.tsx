@@ -17,10 +17,19 @@ try {
 
 const { rootStore, env } = createStore({ envConfig });
 
-// for debugging
-console.log(rootStore);
+if (nodeEnv === "development") {
+  // for debugging
+  console.log(rootStore);
+}
 
 const initApp = async () => {
+  // run Mocks on development
+  if (nodeEnv === "development") {
+    const { worker } = require("./mocks/browser");
+    await worker.start();
+  }
+
+  await rootStore.uiStore.authStore.loginIfTokenExists();
   await env.translationService.init();
 
   ReactDOM.render(

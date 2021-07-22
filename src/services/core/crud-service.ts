@@ -1,6 +1,6 @@
-import BaseEntityService, { BaseResponse } from "./base-entity-service";
+import BaseService, { BaseResponse } from "./base-service";
 
-export default class CrudService extends BaseEntityService {
+export default class CrudService extends BaseService {
   async create<D, R>(data: D) {
     const response = await this.httpService.post<D, BaseResponse<R>>(
       `${this.path}`,

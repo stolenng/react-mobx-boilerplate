@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import MainRouter from "./main-router";
+import Home from "../home/home";
 
 const LoggedIn = () => {
   return (
@@ -15,7 +16,7 @@ const LoggedIn = () => {
           <MainRouter />
         </Route>
         <Route path="/home">
-          <div>Home</div>
+          <Home />
         </Route>
         <Redirect to="/" />
       </Switch>

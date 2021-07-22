@@ -1,9 +1,9 @@
-import BaseEntityService from "../core/base-entity-service";
+import BaseService from "../core/base-service";
 import CredentialsStorage, {
   StorageItems,
 } from "../core/credentials-storage-service";
 
-export default class AuthService extends BaseEntityService {
+export default class AuthService extends BaseService {
   // TODO: change this to your route in server
   static route = "auth";
   private storage: CredentialsStorage = new CredentialsStorage();
@@ -22,8 +22,6 @@ export default class AuthService extends BaseEntityService {
 
   // TODO: Replace any here with your types in the below requests :)
   async loginWithToken(token: string) {
-    this.httpService.setToken(token);
-
     const response = await this.httpService.post<any, any>(
       `${this.path}/login`
     );

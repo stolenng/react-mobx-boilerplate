@@ -2,5 +2,8 @@
   "logout": "Logout",
   "hello": "Hello",
   "hebrew": "Hebrew",
-  "english": "English"
+  "english": "English",
+  "language": "Language",
+  "username": "User Name",
+  "password": "Password"
 }

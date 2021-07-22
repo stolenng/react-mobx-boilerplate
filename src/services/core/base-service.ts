@@ -9,7 +9,7 @@ interface BaseHttpServiceParams {
   httpService: HttpService;
 }
 
-class BaseEntityService {
+class BaseService {
   static route: string = "route name not implemented";
 
   protected httpService: HttpService;
@@ -25,4 +25,4 @@ class BaseEntityService {
   }
 }
 
-export default BaseEntityService;
+export default BaseService;

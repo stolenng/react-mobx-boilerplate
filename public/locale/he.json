@@ -2,5 +2,9 @@
   "logout": "התנתק",
   "login": "התחבר",
   "hebrew": "עברית",
-  "english": "אנגלית"
+  "english": "אנגלית",
+  "language": "שפה",
+  "hello": "שלום",
+  "username": "שם משתמש",
+  "password": "סיסמה"
 }

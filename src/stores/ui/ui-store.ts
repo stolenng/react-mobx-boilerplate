@@ -25,12 +25,6 @@ class UiStore {
     makeObservable(this);
   }
 
-  saveToken(token: string) {
-    const { apiFactory } = getEnv();
-
-    apiFactory.saveToken(token);
-  }
-
   @action
   updateLanguage(language: Languages) {
     this.currentLanguage = language;

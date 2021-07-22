@@ -1,4 +1,4 @@
-import { Select } from "antd";
+import { Select, Typography } from "antd";
 import { Languages } from "../../stores/ui/ui-store";
 import { useTranslation } from "react-i18next";
 import { useStore } from "../../helpers/use-store";
@@ -13,10 +13,15 @@ const LanguageSelect = () => {
     uiStore.updateLanguage(lang as Languages);
 
   return (
-    <Select defaultValue={uiStore.currentLanguage} onSelect={changeLanguage}>
-      <Option value={Languages.Hebrew}>{t("hebrew")}</Option>
-      <Option value={Languages.English}>{t("english")}</Option>
-    </Select>
+    <div>
+      <div>
+        <Typography.Text>{t("language")}</Typography.Text>
+      </div>
+      <Select defaultValue={uiStore.currentLanguage} onSelect={changeLanguage}>
+        <Option value={Languages.Hebrew}>{t("hebrew")}</Option>
+        <Option value={Languages.English}>{t("english")}</Option>
+      </Select>
+    </div>
   );
 };
 

@@ -37,7 +37,7 @@ class AuthStore {
 
     this.setUser(null);
     this.setAuthState(AuthState.LoggedOut);
-    apiFactory.setToken("");
+    apiFactory.saveToken("");
   };
 
   @computed
@@ -67,7 +67,7 @@ class AuthStore {
     this.setAuthState(AuthState.LoggedIn);
     this.setUser(user);
 
-    apiFactory.setToken(token || user.token);
+    apiFactory.saveToken(token || user.token);
 
     apiFactory.authService.storeCredentials(token);
 
