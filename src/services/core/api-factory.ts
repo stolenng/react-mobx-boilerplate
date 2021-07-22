@@ -1,17 +1,17 @@
 import HttpService from "./http-service";
-import UserService from "../entities/user-service";
-import CubeService from "../entities/cube-service";
+import AuthService from "../api/auth-service";
+import ExampleCrudService from "../api/example-crud-service";
 
 const ApiList = [
   {
-    variableName: "userService",
-    classEntity: UserService,
-    route: UserService.route,
+    variableName: "authService",
+    classEntity: AuthService,
+    route: AuthService.route,
   },
   {
     variableName: "cubeService",
-    classEntity: CubeService,
-    route: CubeService.route,
+    classEntity: ExampleCrudService,
+    route: ExampleCrudService.route,
   },
 ];
 
@@ -21,8 +21,8 @@ export interface ApiFactoryParams {
 
 // declaration merging with class
 interface ApiFactory {
-  userService: UserService;
-  cubeService: CubeService;
+  exampleCrudService: ExampleCrudService;
+  authService: AuthService;
 }
 
 class ApiFactory {

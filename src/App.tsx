@@ -1,25 +1,32 @@
 import React from "react";
-import "./App.css";
-import { ConfigProvider } from "antd";
+import { ConfigProvider, Spin } from "antd";
 import { observer } from "mobx-react";
 import { useStore } from "./helpers/use-store";
+import LoggedIn from "./features/routers/logged-in";
+import LoggedOut from "./features/routers/logged-out";
 
 // order important so we can override antd
 import "antd/dist/antd.css";
 import "./App.scss";
-import LoggedIn from "./features/routers/logged-in";
-import LoggedOut from "./features/routers/logged-out";
+import { AuthState } from "./stores/ui/auth-store/auth-store";
 
 function App() {
   const rootStore = useStore();
-  const isAuthenticated = false;
-  const { uiStore } = rootStore;
+  const {
+    uiStore,
+    uiStore: { authStore },
+  } = rootStore;
 
   return (
     <ConfigProvider direction={uiStore.direction}>
       <div className="App">
+        {AuthState.Authenticating && <Spin />}
         {/* Load spinner while we are waiting for authentication - for both logged in + logged out */}
-        {isAuthenticated ? <LoggedIn /> : <LoggedOut />}
+        {authStore.authState === AuthState.LoggedIn ? (
+          <LoggedIn />
+        ) : (
+          <LoggedOut />
+        )}
       </div>
     </ConfigProvider>
   );

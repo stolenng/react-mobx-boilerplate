@@ -1,16 +1,4 @@
-.hoverable {
-  &:hover {
-    color: $hover-color;
-    cursor: pointer;
-  }
-
-  &.warning {
-    &:hover {
-      color: red;
-    }
-  }
-}
-
+// global classes
 .center {
   position: absolute;
   top: 50%;

@@ -1,6 +1,7 @@
 import { action, computed, makeObservable, observable } from "mobx";
 import { translationKey } from "../../services/translation-service";
 import { getEnv } from "../../helpers/mobx-easy-wrapper";
+import AuthStore from "./auth-store/auth-store";
 
 export enum Languages {
   Hebrew = "he",
@@ -12,6 +13,8 @@ class UiStore {
   currentLanguage: Languages;
 
   initialUrl?: string;
+
+  authStore: AuthStore = new AuthStore();
 
   constructor() {
     this.currentLanguage =
