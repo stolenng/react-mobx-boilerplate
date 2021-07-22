@@ -1,3 +1,47 @@
+<div align="center"><h1>React + MobX Boilerplate ^_^</h1></div>
+
+<div align="center"><strong>Plug And Play(clone and code) </strong></div>
+<div align="center">The most updated <b>React + MobX(2021)</b> Boilerplate With the latest Tech Stack</div>
+
+<dl>
+  <dt>Based On Create React App</dt>
+  <dd>Get all the abilities of CRA out the box</dd>
+
+<dt>TypeScript</dt>
+  <dd>Because we love types!</dd>
+
+  <dt>MobX State Management</dt>
+  <dd>Everything needed to get started with MobX</dd>
+
+  <dt>Login + Authentication Management</dt>
+  <dd>Login Page + Authentication implemented already for you</dd>
+
+  <dt>Api Infrastructure</dt>
+  <dd>Tired of writing API services all time ? Ready Api infrastucture for just add models/entities and focusing on the important parts of the development</dd>
+
+  <dt>Antd Components Library</dt>
+  <dd>Examples of antd components usage</dd>
+
+  <dt>Ready Translations</dt>
+  <dd>i18next ready translations, just add translations file and enjoy</dd>
+
+  <dt>React Hook Form</dt>
+  <dd>The best and most simple library to working with forms</dd>
+
+  <dt>DayJS</dt>
+  <dd>Because moment.js is dead :<</dd>
+
+  <dt>DayJS</dt>
+  <dd>Because moment.js is dead :<</dd>
+
+  <dt>Prettier + Husky</dt>
+  <dd>Get your code cleaned on each commit</dd>
+</dl>
+
+# Structure
+
+Soon...
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
