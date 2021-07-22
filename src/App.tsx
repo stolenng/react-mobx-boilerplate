@@ -1,5 +1,5 @@
 import React from "react";
-import { ConfigProvider, Spin } from "antd";
+import { ConfigProvider } from "antd";
 import { observer } from "mobx-react";
 import { useStore } from "./helpers/use-store";
 import LoggedIn from "./features/routers/logged-in";
@@ -9,6 +9,7 @@ import LoggedOut from "./features/routers/logged-out";
 import "antd/dist/antd.css";
 import "./App.scss";
 import { AuthState } from "./stores/ui/auth-store/auth-store";
+import LanguageSelect from "./features/language-select/language-select";
 
 function App() {
   const rootStore = useStore();
@@ -20,13 +21,13 @@ function App() {
   return (
     <ConfigProvider direction={uiStore.direction}>
       <div className="App">
-        {authStore.authState === AuthState.Authenticating && <Spin />}
-        {/* Load spinner while we are waiting for authentication - for both logged in + logged out */}
         {authStore.authState === AuthState.LoggedIn ? (
           <LoggedIn />
         ) : (
           <LoggedOut />
         )}
+
+        <LanguageSelect />
       </div>
     </ConfigProvider>
   );

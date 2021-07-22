@@ -17,6 +17,9 @@ try {
 
 const { rootStore, env } = createStore({ envConfig });
 
+// for debugging
+console.log(rootStore);
+
 const initApp = async () => {
   await env.translationService.init();
 
