@@ -9,7 +9,7 @@
   <dt>Based On Create React App</dt>
   <dd>Get all the abilities of CRA out the box</dd>
 
-<dt>TypeScript</dt>
+  <dt>TypeScript</dt>
   <dd>Because we love types!</dd>
 
   <dt>MobX State Management</dt>
@@ -46,7 +46,7 @@
   <dd>Full example of todo list with api calls, mobx and React</dd>
 
   <dt>Ready For Production!</dt>
-  <dd>Environment mangement supported, just build and deploy your app</dd>
+  <dd>Environment management supported, just build and deploy your app</dd>
 
   <dt>Everything is modifiable</dt>
   <dd>If you don't like any part of the boilerplate, you can just replace in seconds !</dd>
@@ -58,7 +58,26 @@ Soon...
 
 # Resources
 
-Soon...
+- Documentation:
+  - https://mobx.js.org/README.html
+  - https://reactjs.org/
+  - https://www.typescriptlang.org/
+  - https://create-react-app.dev/
+  - https://react-hook-form.com/
+  - https://github.com/stolenng/mobx-easy
+  - https://day.js.org/
+  - https://mswjs.io/
+  - http://mobx-easy.georgy-glezer.com/docs/intro.html
+  - https://react.i18next.com/
+  - https://ant.design/
+- Articles:
+  - https://mobx.js.org/defining-data-stores.html
+  - https://levelup.gitconnected.com/mobx-tips-and-pitfalls-92e635108653
+  - https://levelup.gitconnected.com/react-hooks-rules-for-cleaner-code-3bceb5decf7
+  - https://levelup.gitconnected.com/react-hooks-mobx-todolist-c138eb4f3d04
+  - https://medium.com/front-end-weekly/separation-of-data-and-ui-in-your-web-app-2c3f1cc3fbda
+- Course:
+  - https://www.udemy.com/course/mobx-in-depth-with-react/
 
 # Contribution
 
