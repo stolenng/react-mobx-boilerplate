@@ -24,10 +24,8 @@ if (nodeEnv === "development") {
 
 const initApp = async () => {
   // run Mocks on development
-  if (nodeEnv === "development") {
-    const { worker } = require("./mocks/browser");
-    await worker.start();
-  }
+  const { worker } = require("./mocks/browser");
+  await worker.start();
 
   await rootStore.uiStore.authStore.loginIfTokenExists();
   await env.translationService.init();
