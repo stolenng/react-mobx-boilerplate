@@ -54,7 +54,78 @@
 
 # Structure
 
-Soon...
+### Translations
+
+`public/locale` - Add `${languageName}.json` to support additional language.
+
+### Components
+
+Any small components that are building blocks for the project can be added here.
+
+### Env
+
+Jsons by the name of the environment, e.g `production.json`.
+Anything added here will be available at the application in `index.tsx` and `create-store.ts`.
+
+### Features
+
+Here goes the more big "components", like the to-do list and big features like whole pages, chat, etc..
+
+### Helpers
+
+- `create-store.ts`
+  - In charge of initializing everything we need for our application
+  - Creating the `env` object we can access in our mobx-stores by using `getEnv()`
+  - Creating the `RootStore` through `mobx-easy wrapRoot` function.
+- `mobx-easy-wrapper.ts`
+  - Wrapping `getEnv + getRoot` with the correct generic types, so we won't be forced to do it everywhere.
+- `store-provider.ts`
+  - Provider for the rootStore so we can use our hook `useStore` in every react component.
+
+### Hooks
+
+Hooks for the project, just like `useStore` gives us ability to access the `rootStore` from every react component.
+
+### Mocks
+
+For those who are interested in mocks during development,
+You can add mocks freely in `mocks` folder.
+<br>
+If you want to disable - go to `index.tsx` and remove lines `27-30`
+
+### Services
+
+Here are all of the services of the project, for example: `translation-service.ts`.
+
+- Core Service
+  - Base Service - Common logic that relates to all services in the project that need to execute HTTP requests.
+  - Http Service - Axios wrapped in a service with support at setting JWT token.
+  - Crud Service - Service implements all CRUD functions, so we don't need to copy and paste it everywhere.
+  - Api Factory - Stores all of our HTTP Service/API Services, used there declaration merging, so we can add dynamically services easily by just adding object to the array.
+- Api Services
+  - Auth Service - Implements logic regarding authentication.
+  - Todos Service - Plain and simple, extends CRUD Service.
+
+### Stores
+
+MobX Stores and Models stored here, we are using `RootStore` and `DataStore` + `UiStore` to diffrenicate between our data in the application and the ui/views.
+<br>
+We Also use `mobx-easy` for easier sharing of `RootStore` between store and `Env` object. (you can read about it in the resources section)
+
+### Styles
+
+Here are the global styles of the project.
+
+### Examples
+
+- There is a todo list feature consists of:
+  - Crud Service
+  - MobX Store, MobX Model
+  - React Components using mobx store and model
+  - Basic styles
+    <br>
+- Environment
+  - Ready File for dev + prod
 
 # Resources
 
@@ -81,7 +152,7 @@ Soon...
 
 # Contribution
 
-Feel free to talk to me on any social network, open pull requests, issues, suggest changes, and open Pull Requests :)
+Feel free to talk to me on any social network, open pull requests, issues, suggest changes, and open pull requests :)
 
 # Getting Started with Create React App
 

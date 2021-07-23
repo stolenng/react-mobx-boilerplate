@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import TodoComponent from "./todo";
 import { observer } from "mobx-react";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 import { TodoForm } from "./todo-form";
 import { Col, Row, Typography } from "antd";
 import { useTranslation } from "react-i18next";

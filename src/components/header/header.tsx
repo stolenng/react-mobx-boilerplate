@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button, Layout } from "antd";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 import { observer } from "mobx-react";
 
 const Header = () => {

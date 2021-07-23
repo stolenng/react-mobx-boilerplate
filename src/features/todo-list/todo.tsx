@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Todo from "../../stores/data/todos-store/todo";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 import { Button, Checkbox, Input, Row, Typography } from "antd";
 import { useTranslation } from "react-i18next";
 

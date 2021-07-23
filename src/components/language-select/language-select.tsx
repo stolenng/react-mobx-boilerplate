@@ -1,7 +1,7 @@
 import { Typography } from "antd";
 import { Languages } from "../../stores/ui/ui-store";
 import { useTranslation } from "react-i18next";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 
 const LanguageSelect = () => {
   const { uiStore } = useStore();

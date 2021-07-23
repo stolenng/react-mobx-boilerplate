@@ -1,7 +1,7 @@
 import React from "react";
 import { ConfigProvider, Layout } from "antd";
 import { observer } from "mobx-react";
-import { useStore } from "./helpers/use-store";
+import { useStore } from "./hooks/use-store";
 import LoggedIn from "./features/routers/logged-in";
 import LoggedOut from "./features/routers/logged-out";
 import { AuthState } from "./stores/ui/auth-store/auth-store";

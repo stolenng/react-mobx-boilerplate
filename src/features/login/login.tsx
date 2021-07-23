@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button, Card, Input, Space, Typography } from "antd";
 import { Controller, useForm } from "react-hook-form";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 
 interface FormProps {
   username: string;

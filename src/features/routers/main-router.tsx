@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useStore } from "../../helpers/use-store";
+import { useStore } from "../../hooks/use-store";
 import { useHistory, useLocation } from "react-router-dom";
 
 const MainRouter = () => {
