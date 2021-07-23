@@ -33,6 +33,9 @@
   <dt>DayJS</dt>
   <dd>Because moment.js is dead :</dd>
 
+  <dt>Sass</dt>
+  <dd></dd>
+
   <dt>Mock Service Worker</dt>
   <dd>Simple library to mock server during development</dd>
 
@@ -41,6 +44,9 @@
 
   <dt>Todo List Example</dt>
   <dd>Full example of todo list with api calls, mobx and React</dd>
+
+  <dt>Ready For Production!</dt>
+  <dd>Environment mangement supported, just build and deploy your app</dd>
 
   <dt>Everything is modifiable</dt>
   <dd>If you don't like any part of the boilerplate, you can just replace in seconds !</dd>
